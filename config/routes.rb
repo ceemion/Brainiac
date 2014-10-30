@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  
   root :to => "brainiac#index"
   
-
   devise_for :users
   resources :quizzes
+
+  #match ':controller(/:action(/:id))', :via => :get
 
   #root :to => redirect('/quizzes')
 
@@ -61,5 +63,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  match ':controller(/:action(/:id))', :via => :get
 end

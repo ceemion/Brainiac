@@ -4,7 +4,10 @@
   <thead>
     <tr>
       <th>Question</th>
-      <th>Options</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
       <th>Answer</th>
       <th>Category</th>
       <th colspan="3"></th>
@@ -15,7 +18,10 @@
     <% @quizzes.each do |quiz| %>
       <tr>
         <td><%= quiz.question %></td>
-        <td><%= quiz.options %></td>
+        <td><%= quiz.opt1 %></td>
+        <td><%= quiz.opt2 %></td>
+        <td><%= quiz.opt3 %></td>
+        <td><%= quiz.opt4 %></td>
         <td><%= quiz.answer %></td>
         <td><%= quiz.category %></td>
         <td><%= link_to 'Show', quiz %></td>
