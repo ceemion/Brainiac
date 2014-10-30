@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   
   root :to => "brainiac#index"
+
+  get '/takeQuiz' => 'brainiac#takequiz'
   
   devise_for :users
   resources :quizzes
+  resources :real_quizzes
 
   match ':controller(/:action(/:id))', :via => :get
 
